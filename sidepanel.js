@@ -108,6 +108,21 @@ async function refreshTabList() {
     return;
   }
 
+  // background.jsから現在の状態を取得して復元
+  try {
+    const response = await chrome.runtime.sendMessage({ type: 'GET_TAB_STATES' });
+    if (response && response.states) {
+      // background.jsの状態をmanagedTabsに復元
+      response.states.forEach(([tabId, state]) => {
+        if (activeTabs.some(tab => tab.id === tabId)) {
+          managedTabs.set(tabId, state);
+        }
+      });
+    }
+  } catch (error) {
+    console.error('状態の取得に失敗:', error);
+  }
+
   tabListContainer.innerHTML = '';
 
   activeTabs.forEach(tab => {
