@@ -15,9 +15,6 @@ CLAUDE.md
 
 # アイコン生成用ツール（動作には不要）
 icons/generate-icons.html
-icons/ChatGPT-Logo.svg.png
-icons/claude-icon.png
-icons/GEMINI_.png
 
 # OS固有のファイル
 .DS_Store
