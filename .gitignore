@@ -1,0 +1,30 @@
+# 動作に不要なファイル・フォルダ
+不要/
+_metadata/
+.claude/
+
+# 開発・デバッグ用ファイル
+test.html
+test_network_intercept.html
+debug_test.html
+debug_guide.md
+
+# ドキュメント（オプション - 必要に応じてコミット可）
+AGENTS.md
+CLAUDE.md
+
+# アイコン生成用ツール（動作には不要）
+icons/generate-icons.html
+
+# OS固有のファイル
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# エディタ設定ファイル（オプション）
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+

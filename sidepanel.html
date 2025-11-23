@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Dashboard</title>
+  <link rel="stylesheet" href="sidepanel.css">
+</head>
+
+<body>
+  <div class="container">
+
+
+    <!-- AIサービス起動パネル -->
+    <div class="service-launcher">
+      <h2>サービス起動</h2>
+      <div class="service-grid">
+        <button class="service-btn" data-service="chatgpt" title="ChatGPTを新しいタブで開く">
+          <img src="icons/ChatGPT-Logo.svg.png" alt="ChatGPT" class="service-icon-img">
+          <span class="service-name">ChatGPT</span>
+        </button>
+        <button class="service-btn" data-service="claude" title="Claudeを新しいタブで開く">
+          <img src="icons/claude-icon.png" alt="Claude" class="service-icon-img">
+          <span class="service-name">Claude</span>
+        </button>
+        <button class="service-btn" data-service="gemini" title="Geminiを新しいタブで開く">
+          <img src="icons/GEMINI_.png" alt="Gemini" class="service-icon-img">
+          <span class="service-name">Gemini</span>
+        </button>
+        <button class="service-btn" data-service="notebooklm" title="NotebookLMを新しいタブで開く">
+          <img src="icons/notebooklm-icon.webp" alt="NotebookLM" class="service-icon-img">
+          <span class="service-name">NotebookLM</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- アクティブなタブ一覧 -->
+    <div class="tab-list">
+      <h2>タブ一覧 (最大10)</h2>
+      <div id="tabList" class="tabs-container">
+        <div class="empty-message">サービスを起動してください</div>
+      </div>
+    </div>
+
+    <!-- 設定パネル（非表示） -->
+    <div id="settingsPanel" class="settings-panel hidden">
+      <h2>通知音設定</h2>
+      <div class="sound-options">
+        <label>
+          <input type="radio" name="sound" value="bell" checked>
+          <span>ベル</span>
+          <button class="preview-btn" data-sound="bell">試聴</button>
+        </label>
+        <label>
+          <input type="radio" name="sound" value="chime">
+          <span>チャイム</span>
+          <button class="preview-btn" data-sound="chime">試聴</button>
+        </label>
+        <label>
+          <input type="radio" name="sound" value="pop">
+          <span>ポップ</span>
+          <button class="preview-btn" data-sound="pop">試聴</button>
+        </label>
+        <label>
+          <input type="radio" name="sound" value="double">
+          <span>ダブル</span>
+          <button class="preview-btn" data-sound="double">試聴</button>
+        </label>
+        <label>
+          <input type="radio" name="sound" value="triple">
+          <span>トリプル</span>
+          <button class="preview-btn" data-sound="triple">試聴</button>
+        </label>
+      </div>
+      <button id="closeSettings">閉じる</button>
+    </div>
+
+    <!-- フローティング設定ボタン（右下） -->
+    <button id="settingsButton" class="floating-settings" title="設定">⚙️</button>
+  </div>
+
+  <script src="sidepanel.js"></script>
+</body>
+
+</html>
