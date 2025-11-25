@@ -697,6 +697,9 @@ function detectNotebookLMCompletion() {
     // 'mat-card.is-loading',
     '.to-user-message-card-content.is-loading',
     '.thinking-message',
+    // Studio Panel selectors
+    '.artifact-icon.rotate',
+    '.shimmer-yellow',
   ];
 
   // Stability thresholds to avoid flicker

@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "AI Dashboard",
-  "version": "1.1",
+  "version": "1.02",
   "description": "サイドパネルに複数のAIサービス（ChatGPT、Claude、Gemini、NotebookLM）を表示",
   "permissions": [
     "sidePanel",
@@ -45,7 +45,9 @@
         "https://chat.openai.com/*",
         "https://notebooklm.google.com/*"
       ],
-      "js": ["content.js"],
+      "js": [
+        "content.js"
+      ],
       "run_at": "document_idle"
     },
     {
@@ -53,7 +55,9 @@
         "https://claude.ai/*",
         "https://gemini.google.com/*"
       ],
-      "js": ["original_content_claude_gemini.js"],
+      "js": [
+        "original_content_claude_gemini.js"
+      ],
       "run_at": "document_idle"
     }
   ],
